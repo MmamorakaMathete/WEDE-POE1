@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+<meta charset=”UTF-8”><meta name=”viewport” content=”width=device-width, initial-scale=1.0”> 
+
+<title>Product Enquiry | Tshego’s Goodies and Café</title> 
+
+<meta name="description" content="Enquire about cakes, cupcakes and pastries from Tshego’s Goodies and Café. Share your date, quantity and budget."> 
+
+<meta name="keywords" content="cake enquiry, cupcake order enquiry, bakery prices, custom cake"> 
+
+<link rel="stylesheet" href="style.css"><script src="script.js" defer></script> 
+
+</head> 
+
+<body> 
+
+<header class="site-header"><a class="logo" href="index.html">TSHEGO’S <span>GOODIES</span></a><button class="menu-toggle" id="menuToggle" aria-label=”Open navigation menu” aria-expanded=”false”>☰</button><nav class=”main-nav” id=”mainNav”><a href=”index.html”>Home</a><a href=”about.html”>About Us</a><a href=”products.html”>Products</a><a href=”gallery.html”>Gallery</a><a class=”active” href=”enquiry.html”>Enquiries</a><a href=”contact.html”>Contact Us</a></nav></header> 
+
+<main id=”main”> 
+
+    <section class=”page-banner”><p class=”eyebrow”>TELL US WHAT YOU NEED</p><h1>Product Enquiry</h1><p>Share a few details so we can respond to your request.</p></section> 
+
+<section class=”section form-layout”><div><h2>Plan your treat</h2><p>Use this form to enquire about a product or celebration. When you submit valid information, a sample response will appear on this page.</p><div class=”contact-note”><strong>Please remember</strong><p>This demonstration does not check live stock or place a real order. Final availability and prices must be confirmed with the bakery.</p></div></div> 
+
+<form id=”enquiryForm” class=”site-form” novalidate>
+
+<div class=”field”><label for=”enquiryName”>Full name *</label><input id=”enquiryName” name=”name” type=”text” minlength=”2” maxlength=”70” required autocomplete=”name”><small class=”error” id=”enquiryNameError”></small></div> 
+<div class=”field”><label for=”enquiryEmail”>Email address *</label><input id=”enquiryEmail” name=”email” type=”email” required autocomplete=”email”><small class=”error” id=”enquiryEmailError”></small></div> 
+<div class=”field”><label for=”enquiryPhone”>Phone number *</label><input id=”enquiryPhone” name=”phone” type=”tel” pattern=”[0-9 +()-]{7,20}” required autocomplete=”tel”><small class=”error” id=”enquiryPhoneError”></small></div> 
+<div class=”field”><label for=”enquiryProduct”>What are you enquiring about? *</label><select id=”enquiryProduct” name=”product” required><option value=””>Choose a product</option><option value=”Chocolate Cake”>Chocolate Cake</option><option value=”Cupcakes”>Cupcakes</option><option value=”Pastries”>Pastries</option><option value=”Cookies”>Cookies</option><option value=”Other”>Other</option></select><small class=”error” id=”enquiryProductError”></small></div> 
+<div class=”field”><label for=”enquiryDate”>Preferred date (optional)</label><input id=”enquiryDate” name=”date” type=”date”><small class=”error” id=”enquiryDateError”></small></div> 
+<div class=”field”><label for=”enquiryQuantity”>Quantity or number of servings *</label><input id=”enquiryQuantity” name=”quantity” type=”number” min=”1” max=”500” required><small class=”error” id=”enquiryQuantityError”></small></div> 
+<div class=”field”><label for=”enquiryBudget”>Estimated budget in rand (optional)</label><input id=”enquiryBudget” name=”budget” type=”number” min=”0” max=”100000” placeholder=”e.g. 500”><small class=”error”id=”enquiryBudgetError”></small></div>
+ <div class=”field”><label for=”enquiryDetails”>Additional details *</label><textarea id=”enquiryDetails” name=”details” rows=”5” minlength=”10” maxlength=”1000” required placeholder=”Tell us about the size, flavour or design you want.”></textarea><small class=”error” id=”enquiryDetailsError”></small></div> 
+
+<button class=”button” type=”submit”>Submit enquiry</button><p id=”enquiryStatus” class=”form-status” aria-live=”polite”></p> 
+
+</form></section>    
